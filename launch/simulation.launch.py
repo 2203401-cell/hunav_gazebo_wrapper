@@ -218,8 +218,8 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([pmb2_gazebo_launch]),
         launch_arguments={
             'robot_name':  robot_name,
-            'laser_model':  'sick-571-gpu', #scan_model,
-            'add_on_module': 'rgbd-sensors',
+            'laser_model':  'sick-571', #scan_model,
+            'add_on_module': 'no-add-on',
             'is_public_sim': 'True',
             'use_sim_time': 'True',
             'world_name': map_path,
@@ -395,7 +395,7 @@ def generate_launch_description():
             description='The robot initial pitch angle in the world')
     declare_arg_pY = DeclareLaunchArgument('gzpose_Y', default_value='0.0',
             description='The robot initial yaw angle in the world')
-    declare_arg_laser = DeclareLaunchArgument('laser_model', default_value='sick-571-gpu',
+    declare_arg_laser = DeclareLaunchArgument('laser_model', default_value='sick-571',
             description='the laser model to be used')
     declare_arg_rgbd = DeclareLaunchArgument('rgbd_sensors', default_value='false',
             description='whether to use rgbd cameras or not')
