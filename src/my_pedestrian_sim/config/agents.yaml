@@ -1,0 +1,23 @@
+hu_nav_agent_node:
+  ros__parameters:
+    use_sim_time: true
+    agents:
+      - 'agent1'
+    agent1:
+      id: 1
+      skin: 0  # 0: 人間モデル (Gazebo標準)
+      group_id: 0
+      desired_velocity: 0.8  # 歩行速度 (m/s)
+      radius: 0.35
+      behavior:
+        type: 1  # 1: Regular (通常の往復歩行)
+        configuration: 0
+        duration: 0.0
+      goals:
+        - [3.0, 0.0, 0.0]   # 目標地点1
+        - [-3.0, 0.0, 0.0]  # 目標地点2 (廊下を往復します)
+      init_pose:
+        x: 3.0
+        y: 0.0
+        z: 0.0
+        h: 0.0
