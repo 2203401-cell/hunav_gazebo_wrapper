@@ -26,8 +26,8 @@ def generate_launch_description():
 
     # to activate the use of nvidia gpu
     use_nvidia_gpu = [
-        '__NV_PRIME_RENDER_OFFLOAD=1 ',
-        '__GLX_VENDOR_LIBRARY_NAME=nvidia ',
+        '',
+        '',
     ]
 
     # World generation parameters
@@ -254,8 +254,8 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([pmb2_gazebo_launch]),
         launch_arguments={
             'robot_name':  robot_name,
-            'laser_model':  'sick-571-gpu', #scan_model,
-            'add_on_module': 'rgbd-sensors',
+            'laser_model':  'sick-571', #scan_model,
+            'add_on_module': 'no-add-on',
             'is_public_sim': 'True',
             'use_sim_time': 'True',
             'world_name': map_path,
@@ -294,7 +294,7 @@ def generate_launch_description():
                 LogInfo(msg='GenerateWorld started, launching Gazebo after 3 seconds...'),
                 TimerAction(
                     period=3.0,
-                    actions=[gzserver_process, gzclient_process],
+                    actions=[gzserver_process],
                 )
             ]
         )

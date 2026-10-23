@@ -1,0 +1,23 @@
+hunav_loader:
+  ros__parameters:
+    location: "corridor"
+    agents:
+      - "agent1"
+    agent1:
+      id: 1
+      skin: 0
+      group_id: 0
+      desired_velocity: 1.0
+      radius: 0.35
+      behavior:
+        type: 1
+        configuration: 0
+      init_pose:
+        x: 2.0
+        y: 0.0
+        z: 1.25
+        h: 3.14
+      goals:
+        - x: -2.0
+          y: 0.0
+          z: 1.25

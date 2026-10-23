@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="simple_corridor_world">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <!-- 左壁 (Y = +1.0m) -->
+    <model name="wall_left">
+      <static>true</static>
+      <pose>0 1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 右壁 (Y = -1.0m) -->
+    <model name="wall_right">
+      <static>true</static>
+      <pose>0 -1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 奥壁 (X = +5.0m) -->
+    <model name="wall_front">
+      <static>true</static>
+      <pose>5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 手前壁 (X = -5.0m) -->
+    <model name="wall_back">
+      <static>true</static>
+      <pose>-5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+  </world>
+</sdf><?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="simple_corridor_world">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <!-- 左壁 (Y = +1.0m) -->
+    <model name="wall_left">
+      <static>true</static>
+      <pose>0 1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 右壁 (Y = -1.0m) -->
+    <model name="wall_right">
+      <static>true</static>
+      <pose>0 -1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 奥壁 (X = +5.0m) -->
+    <model name="wall_front">
+      <static>true</static>
+      <pose>5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 手前壁 (X = -5.0m) -->
+    <model name="wall_back">
+      <static>true</static>
+      <pose>-5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+  </world>
+</sdf><?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="simple_corridor_world">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <!-- 左壁 (Y = +1.0m) -->
+    <model name="wall_left">
+      <static>true</static>
+      <pose>0 1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 右壁 (Y = -1.0m) -->
+    <model name="wall_right">
+      <static>true</static>
+      <pose>0 -1.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 奥壁 (X = +5.0m) -->
+    <model name="wall_front">
+      <static>true</static>
+      <pose>5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- 手前壁 (X = -5.0m) -->
+    <model name="wall_back">
+      <static>true</static>
+      <pose>-5.0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>0.1 2.1 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 2.1 1</size></box></geometry></visual>
+      </link>
+    </model>
+  </world>
+</sdf>

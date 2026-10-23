@@ -21,8 +21,8 @@ def generate_launch_description():
 
     # to activate the use of nvidia gpu
     use_nvidia_gpu = [
-        '__NV_PRIME_RENDER_OFFLOAD=1 ',
-        '__GLX_VENDOR_LIBRARY_NAME=nvidia ',
+        '',
+        '',
     ]
 
     # World generation parameters

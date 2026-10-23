@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="tb3_hunav_world">
+
+    <!-- Physics Settings -->
+    <physics name="default_physics" default="0" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Scene & Lighting -->
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Sun Light -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- HuNav Gazebo Plugin -->
+    <plugin name="hunav_plugin" filename="libHuNavPlugin.so">
+      <update_rate>100</update_rate>
+      <robot_name>burger</robot_name>
+      <use_gazebo_obs>true</use_gazebo_obs>
+      <global_frame_to_publish>map</global_frame_to_publish>
+      <use_navgoal_to_start>false</use_navgoal_to_start>
+      <navgoal_topic>/goal_pose</navgoal_topic>
+      <ignore_models>ground_plane</ignore_models>
+    </plugin>
+
+    <!-- TurtleBot3 Burger Model -->
+    <include>
+      <uri>model://turtlebot3_burger</uri>
+      <name>burger</name>
+      <pose>0.0 0.0 0.01 0 0 0</pose>
+    </include>
+
+    <!-- Human Agent 1 -->
+    <actor name="agent1">
+      <pose>0.845 6.514 1.25 0 0 0</pose>
+      <skin>
+        <filename>model://worker_man/meshes/worker_man.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>model://worker_man/meshes/07_01-walk.bvh</filename>
+        <scale>0.055</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>true</auto_start>
+      </script>
+    </actor>
+
+    <!-- Human Agent 2 -->
+    <actor name="agent2">
+      <pose>-5.694 -4.052 1.25 0 0 0</pose>
+      <skin>
+        <filename>model://worker_man/meshes/worker_man.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>model://worker_man/meshes/07_01-walk.bvh</filename>
+        <scale>0.055</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>true</auto_start>
+      </script>
+    </actor>
+
+    <!-- Human Agent 3 -->
+    <actor name="agent3">
+      <pose>-3.582 8.318 1.25 0 0 0</pose>
+      <skin>
+        <filename>model://worker_man/meshes/worker_man.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>model://worker_man/meshes/07_01-walk.bvh</filename>
+        <scale>0.055</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>true</auto_start>
+      </script>
+    </actor>
+
+  </world>
+</sdf>
