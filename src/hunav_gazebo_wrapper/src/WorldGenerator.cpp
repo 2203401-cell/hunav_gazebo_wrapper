@@ -382,16 +382,16 @@ bool WorldGenerator::processXML()
     XMLElement* rtf = phy->FirstChildElement("real_time_factor");
     if (rtf == nullptr)
     {
-      phy->InsertAfterChild(max_step, time_factor);
-      rtf = phy->FirstChildElement("real_time_factor");
+      phy->InsertAfterChild(mss, time_factor);
+      rtf = time_factor;
     }
     rtf->SetText(1);
 
     XMLElement* rtur = phy->FirstChildElement("real_time_update_rate");
     if (rtur == nullptr)
     {
-      phy->InsertAfterChild(time_factor, time_rate);
-      rtur = phy->FirstChildElement("real_time_update_rate");
+      phy->InsertAfterChild(rtf, time_rate);
+      rtur = time_rate;
     }
     rtur->SetText(1000);  // 100
   }
